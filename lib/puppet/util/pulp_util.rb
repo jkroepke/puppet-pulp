@@ -35,6 +35,8 @@ module Puppet
           importer = 'puppet_importer'
         when 'iso-repo'
           importer = 'iso_importer'
+        when 'docker-repo'
+          importer = 'docker_importer'
         else
           print "[get_repo_syncs] Unknown repo type #{info['notes']['_repo-type']} for repo #{repo_id}.\n"
           return [[], nil]
